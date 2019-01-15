@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <style>
+        [type="text"] {
+            text-transform: uppercase;
+        }
+        code {
+            color: #FF0000;
+        }
+        body {
+            background-color: rgba(186, 88, 211, 0.158);
+        }
+        .container {
+            background-color: rgba(255, 255, 255);
+            border-radius: 5%;
+        }
+        .form-div {
+            display: block;
+            text-align: center;
+        }
+        .form {
+            display: inline-block;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: left;
+        }
+    </style>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Survey Form</h1>
+        <p id="description">
+            Kindly fill out this form to enroll
+        </p>
+        <div class="form-div">
+            <form style="" class="form col-xs-12 col-sm-12 col-md-6 col-lg-6" id="survey-form" action="">
+                <div class="form-group">
+                    <label id="name-label" for="name">Name&nbsp;<code>*</code></label>
+                    <input placeholder="Enter full name" class="form-control" id="name" type="text" required autofocus/>
+                </div>
+                <div class="form-group">
+                    <label id="email-label" for="email">Email&nbsp;<code>*</code></label>
+                    <input placeholder="Enter email" class="form-control" id="email" type="email" required/>
+                </div>
+                <div class="form-group">
+                    <label id="number-label" for="name">Number</label>
+                    <input placeholder="Enter phone number" class="form-control" id="number" type="number" min="10" max="14" />
+                </div>
+                <div class="form-group dropdown">
+                    <label id="dropdown-label" for="dropdown">Location</label>
+                    <select class="form-control" id="dropdown" type="select">
+                        <option value="">Where are you from?</option>
+                        <option value="">Africa</option>
+                        <option value="">Antartica</option>
+                        <option value="">Asia</option>
+                        <option value="">Australia</option>
+                        <option value="">Europe</option>
+                        <option value="">North America</option>
+                        <option value="">South America</option>
+                    </select>
+                </div>
+                <div class="form-group" id="sex">
+                    <label for="sex-label">Sex</label><br />
+                    <div class="form-group">
+                        <input id="sex-male" name="sex" type="radio" value="male" />
+                        <label id="sex-male" for="name">&nbsp;Male&nbsp;</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="sex-female" name="sex" type="radio" value="female" />
+                        <label id="sex-female" for="name">&nbsp;Female&nbsp;</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="sex-none" name="sex" type="radio" value="none" />
+                        <label id="sex-none" for="name">&nbsp;I choose not to tell</label>
+                    </div>
+                </div>
+                <label id="dropdown-label" for="dropdown">Send more surveys:</label>&nbsp;<br />
+                <div class="form-group form-check form-check-inline">
+                    <input type="checkbox" name="" id="" value="daily">&nbsp;Daily&nbsp;
+                    <input type="checkbox" name="" id="" value="weekly">&nbsp;Weekly&nbsp;
+                    <input type="checkbox" name="" id="" value="monthly">&nbsp;Monthly&nbsp;
+                    <input type="checkbox" name="" id="" value="yearly">&nbsp;Yearly&nbsp;
+                    <input type="checkbox" name="" id="" value="never">&nbsp;Never!&nbsp;
+                </div>
+                <div class="form-group">
+                    <label id="number-label" for="name">Additional comments</label>
+                    <textarea class="form-control" id="textarea"  rows="3"></textarea>
+                </div>
+                <div class="form-group text-center">
+                    <button class="btn btn-primary btn-lg" id="submit" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
