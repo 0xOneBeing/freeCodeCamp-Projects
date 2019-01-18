@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product Landing Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <style>
+        header {
+            position: fixed;
+            z-index: 2;
+        }
+        .container {
+            display: block;
+            text-align: center;
+            z-index: 1:
+        }
+        .form {
+            display: inline-block;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: left;
+        }
+        ul.navbar-link {
+            list-style: none;
+            list-style-position: inside;
+            text-align: center;
+        }
+        ul.navbar-link li {
+            display: inline-block;
+        }
+        #nav-bar {
+            display: flex;
+            flex-direction: spacebetween;
+        }
+        [for="email"] {
+            display: none;
+        }
+         @media (max-width: 768px) {
+             video {
+                 width: 160px;
+                 height: 128px;
+             }
+         }
+    </style>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</head>
+<body>
+    <header id="header">
+        <nav class="navbar navbar-expand-md" id="nav-bar">
+            <ul class="navbar-link">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="#video" class="nav-link">Video</a></li>
+                <li><a href="#email" class="nav-link">Enter your email</a></li>
+            </ul>
+        </nav>
+        <img src="https://www.printwand.com/blog/media/2012/01/ultimate-guide-to-your-product-launch.jpg" alt="Product Image" id="header-img" class="img-fluid">
+    </header>
+    <div class="container">
+        <div class="embed-responsive embed-responsive-16by9">
+            <video id="video" height="128" width="160" controls>
+                <!-- <source src="https://www.youtube.com/watch?v=-x2nomQ6iPo" type="video/mp4" /> -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-x2nomQ6iPo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                ></iframe>
+            </video>
+        </div>
+        <form class="form" action="https://www.freecodecamp.com/email-submit" method="post" target="_self" id="form">
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <input id="email" type="email" class="form-control" placeholder="Enter email"/>
+                    <label for="email">Email</label>
+                </div>
+                <div class="col-md-6 form-group">
+                    <input type="submit" id="submit" class="form-control btn btn-primary" >Submit</input>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
