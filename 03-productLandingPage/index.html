@@ -14,18 +14,27 @@
         .container {
             display: block;
             text-align: center;
-            z-index: 1:
+            z-index: 1;
+            padding-top: 100px;
         }
         .form {
             display: inline-block;
             margin-right: auto;
             margin-left: auto;
             text-align: left;
+            padding-top: 15px;
+            padding-bottom: 15px;
         }
         ul.navbar-link {
             list-style: none;
             list-style-position: inside;
             text-align: center;
+        }
+        header {
+            background-color: #FFFFFF;
+        }
+        div.nav {
+            float: right;
         }
         ul.navbar-link li {
             display: inline-block;
@@ -37,6 +46,7 @@
         [for="email"] {
             display: none;
         }
+
          @media (max-width: 768px) {
              video {
                  width: 160px;
@@ -46,21 +56,27 @@
     </style>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </head>
-<body>
+<body id="home">
     <header id="header">
         <nav class="navbar navbar-expand-md" id="nav-bar">
-            <ul class="navbar-link">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="#video" class="nav-link">Video</a></li>
-                <li><a href="#email" class="nav-link">Enter your email</a></li>
-            </ul>
+            <div class="navbar-header">
+                <div class="navbar-brand">
+                    <img src="https://www.printwand.com/blog/media/2012/01/ultimate-guide-to-your-product-launch.jpg" width="100px" alt="Product Image" id="header-img" class="img-fluid">
+                </div>
+                <div class="navbar nav">
+                    <ul class="navbar-link">
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#video" class="nav-link">Video</a></li>
+                        <li><a href="#email" class="nav-link">Enter your email</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        <img src="https://www.printwand.com/blog/media/2012/01/ultimate-guide-to-your-product-launch.jpg" alt="Product Image" id="header-img" class="img-fluid">
     </header>
     <div class="container">
         <div class="embed-responsive embed-responsive-16by9">
-            <video id="video" height="128" width="160" controls>
-                <!-- <source src="https://www.youtube.com/watch?v=-x2nomQ6iPo" type="video/mp4" /> -->
+            <video id="video" height="128" width="160" src="https://www.youtube.com/watch?v=-x2nomQ6iPo" controls>
+                <source src="https://www.youtube.com/watch?v=-x2nomQ6iPo" type="video/mp4" />
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/-x2nomQ6iPo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 ></iframe>
             </video>
@@ -68,11 +84,11 @@
         <form class="form" action="https://www.freecodecamp.com/email-submit" method="post" target="_self" id="form">
             <div class="row">
                 <div class="col-md-6 form-group">
-                    <input id="email" type="email" class="form-control" placeholder="Enter email"/>
+                    <input name="email" id="email" type="email" class="form-control" placeholder="Enter email"/>
                     <label for="email">Email</label>
                 </div>
                 <div class="col-md-6 form-group">
-                    <input type="submit" id="submit" class="form-control btn btn-primary" >Submit</input>
+                    <input type="submit" id="submit" class="form-control btn btn-primary" form="form" />
                 </div>
             </div>
         </form>
